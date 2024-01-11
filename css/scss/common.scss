@@ -1,0 +1,75 @@
+/* common */
+body {
+    height: 3000px;
+    color: #333;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "Nanum Gothic", sans-serif;
+}
+img {
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+.inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 버튼의 상태 */
+.btn {
+    cursor: pointer;
+    &.btn--reverse {
+        background-color: #333;
+        color: #fff !important;
+    }    
+}
+.btn.btn--reverse:hover {
+    background-color: transparent;
+    color: #333 !important;
+}
+
+/* 스크롤 애니메이션 */
+.back-to-position {
+    opacity: 0;
+    transition: 1s;
+}
+// 왼쪽에서 오른쪽(원래 0)으로 나타나기! - 원래 기본 상태는 0 즉, = -150px → 0
+.back-to-position.to-right {
+    transform: translateX(-150px); 
+}
+// 오른쪽에서 왼쪽(원래 0)으로 나타나기! - 원래 기본 상태는 0 즉, = 150px → 0
+.back-to-position.to-left {
+    transform: translateX(150px); 
+}
+.show .back-to-position {
+    // 나타났을 때 기본값 설정
+    opacity: 1;
+    transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+    transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+    transition-delay: .3s;
+}
+.show .back-to-position.delay-2 {
+    transition-delay: .6s;
+    
+}
+.show .back-to-position.delay-3 {
+    transition-delay: .9s;
+}
+.show .back-to-position.delay-4 {
+    transition-delay: 1.2s;
+}
+
+
+
+/* 색상 설정 */
+.fc-white {
+    color: #fff;
+}
