@@ -1,6 +1,9 @@
 @import "module";
 
 /* common */
+.hidden {
+    display: none;
+}
 body {
     height: 3000px;
     color: #333;
